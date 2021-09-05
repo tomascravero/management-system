@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import com.example.betatest.model.users.IUser;
+import com.example.betatest.model.users.UserRoleEnum;
 
 @Entity
 public class User implements IUser {
@@ -22,18 +23,29 @@ public class User implements IUser {
 	private Blob photo;
 	private String country;
 	private String departament;
+	private UserRoleEnum role;
 
-	public User() {}
-	
-	public User(String firstName, String lastName, String email, int age, String country,
-			String departament) {
+	public User() {
+	}
+
+	public User(String firstName, String lastName, String email, int age, String country, String departament,
+			UserRoleEnum role) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
 		this.age = age;
-		//this.photo = photo;
+		// this.photo = photo;
 		this.country = country;
 		this.departament = departament;
+		this.role = role;
+	}
+
+	public UserRoleEnum getRole() {
+		return role;
+	}
+
+	public void setRole(UserRoleEnum role) {
+		this.role = role;
 	}
 
 	public Integer getId() {
