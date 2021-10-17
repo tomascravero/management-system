@@ -1,13 +1,9 @@
 package com.tomc.sysapp;
 
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.util.Date;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import com.tomc.sysapp.model.users.impl.User;
 
 @SpringBootApplication
 public class SYSParkingApplication {

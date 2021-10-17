@@ -2,10 +2,10 @@ package com.tomc.sysapp.model.parking;
 
 import java.util.Optional;
 
-import com.tomc.sysapp.model.cars.impl.Car;
 import com.tomc.sysapp.model.element.IEntity;
 import com.tomc.sysapp.model.floors.impl.Floor;
 import com.tomc.sysapp.model.tickets.impl.Ticket;
+import com.tomc.sysapp.model.vehicle.impl.Vehicle;
 
 public interface IParking extends IEntity {
 
@@ -23,7 +23,7 @@ public interface IParking extends IEntity {
 	 * 
 	 * @return Instanceof Car
 	 */
-	public Car getParkingCar();
+	public Vehicle getParkingCar();
 
 	/**
 	 * Obtiene el objeto Floor (piso) al que pertenece el Parking.

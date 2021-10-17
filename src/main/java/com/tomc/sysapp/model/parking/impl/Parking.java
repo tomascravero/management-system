@@ -2,15 +2,15 @@ package com.tomc.sysapp.model.parking.impl;
 
 import java.util.Optional;
 
-import com.tomc.sysapp.model.cars.impl.Car;
 import com.tomc.sysapp.model.element.impl.Entity;
 import com.tomc.sysapp.model.floors.impl.Floor;
 import com.tomc.sysapp.model.parking.IParking;
 import com.tomc.sysapp.model.tickets.impl.Ticket;
+import com.tomc.sysapp.model.vehicle.impl.Vehicle;
 
 public class Parking extends Entity implements IParking {
 
-	private Car car;
+	private Vehicle car;
 	private Floor floor;
 	private Ticket ticket;
 	private boolean available;
@@ -27,7 +27,7 @@ public class Parking extends Entity implements IParking {
 	}
 
 	@Override
-	public Car getParkingCar() {
+	public Vehicle getParkingCar() {
 		return car;
 	}
 
@@ -36,7 +36,7 @@ public class Parking extends Entity implements IParking {
 		return floor;
 	}
 
-	private void setParkingsStatus(Car car) {
+	private void setParkingsStatus(Vehicle car) {
 		this.car = car;
 		available = !available;
 		ticket = new Ticket(car, this);

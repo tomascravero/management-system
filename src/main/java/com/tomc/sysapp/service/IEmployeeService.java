@@ -1,5 +1,9 @@
 package com.tomc.sysapp.service;
 
-public interface IEmployeeService extends IGenericService {
+import com.tomc.sysapp.model.employee.impl.Employee;
+
+public interface IEmployeeService {
+
+	Iterable<Employee> getEmployees();
 
 }

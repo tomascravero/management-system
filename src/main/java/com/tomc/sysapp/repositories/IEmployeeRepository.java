@@ -1,9 +1,11 @@
 package com.tomc.sysapp.repositories;
 
-import com.tomc.sysapp.model.employee.IEmployee;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface IEmployeeRepository extends IGenericRepository<IEmployee> {
+import com.tomc.sysapp.model.employee.impl.Employee;
 
-	IEmployee getEmployeeWithMaxHours();
-	
+@Repository
+public interface IEmployeeRepository extends JpaRepository<Employee, Long> {
+
 }

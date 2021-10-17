@@ -1,6 +1,9 @@
-package com.tomc.sysapp.model.cars;
+package com.tomc.sysapp.model.vehicle;
 
 public enum CarTypeEnum {
 	// TODO Agregar todos los tipos de vehículos disponibles.
-	CAR
+	CAR,
+	MOTORCICLE,
+	PICKUP,
+	BICYCLE
 }

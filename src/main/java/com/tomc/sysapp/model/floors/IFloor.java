@@ -4,8 +4,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.tomc.sysapp.model.branches.impl.Branch;
-import com.tomc.sysapp.model.cars.impl.Car;
 import com.tomc.sysapp.model.parking.impl.Parking;
+import com.tomc.sysapp.model.vehicle.impl.Vehicle;
 
 public interface IFloor {
 

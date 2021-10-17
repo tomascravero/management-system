@@ -1,4 +1,4 @@
-package com.tomc.sysapp.model.cars;
+package com.tomc.sysapp.model.vehicle;
 
 import com.tomc.sysapp.model.element.IEntity;
 
