@@ -2,12 +2,10 @@ package com.tomc.sysapp.model.element.impl;
 
 import java.sql.Timestamp;
 
-import javax.persistence.GeneratedValue;
-
 /**
- * Modelo genérico para la implementación de entidades de aplicación.
+ * Modelo generico para la implementacion de entidades de aplicacion.
  * 
- * @implNote no debería utilizarse aún
+ * @implNote no deberia utilizarse aun
  *
  */
 public class Entity {
