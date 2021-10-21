@@ -11,9 +11,9 @@ public class SYSParkingApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SYSParkingApplication.class, args);
 		LocalDate localDate = LocalDate.now();
-		System.out.println("*************************************");
+		System.out.println("************************************");
 		System.out.println("RUNNING - " + localDate);
-		System.out.println("*************************************");
+		System.out.println("************************************");
 	}
 
 }
