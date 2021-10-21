@@ -12,9 +12,9 @@ import com.tomc.sysapp.service.IEmployeeService;
 @Service
 public class EmployeeService implements IEmployeeService {
 
-	@Autowired
 	private IEmployeeRepository employeeRepository;
 
+	@Autowired
 	public EmployeeService(IEmployeeRepository employeeRepository) {
 		this.employeeRepository = employeeRepository;
 	}
@@ -27,5 +27,11 @@ public class EmployeeService implements IEmployeeService {
 	public Employee findById(long id) {
 		Employee employee = employeeRepository.getById(id);
 		return employee;
+	}
+
+	public Employee save(Employee employee) {
+		Employee employeePersisted = employeeRepository.save(employee);
+		return employeePersisted;
+
 	}
 }

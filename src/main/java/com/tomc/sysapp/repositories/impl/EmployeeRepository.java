@@ -7,12 +7,10 @@ import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
-import org.springframework.stereotype.Repository;
 
 import com.tomc.sysapp.model.employee.impl.Employee;
 import com.tomc.sysapp.repositories.IEmployeeRepository;
 
-@Repository
 public class EmployeeRepository implements IEmployeeRepository {
 
 	@Override

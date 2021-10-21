@@ -2,7 +2,7 @@ package com.tomc.sysapp.exception.impl;
 
 import com.tomc.sysapp.exception.ISYSException;
 import com.tomc.sysapp.exception.enums.ExceptionType;
-import com.tomc.sysapp.exceptionhandlers.ExceptionHandlerVisitor;
+import com.tomc.sysapp.exception.handlers.ExceptionHandlerVisitor;
 
 public class DuplicateInstanceException extends RuntimeException implements ISYSException {
 

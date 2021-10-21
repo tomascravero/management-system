@@ -26,7 +26,7 @@ public class EmployeeController {
 	public Employee getEmployeeById(@PathVariable Long id) throws Exception, SYSException {
 		Employee employee = employeeService.findById(id);
 		if (employee == null) {
-			throw new SYSException(ExceptionType.NOTFOUND);
+			throw new SYSException(null, null, ExceptionType.NOTFOUND);
 		}
 		return employee;
 	}
@@ -37,7 +37,25 @@ public class EmployeeController {
 		employee.setFirstName("Tomas");
 		employee.setLastName("Empleado");
 		employee.setPhoneNumber("123123");
+//		ArrayList<Employee> employees = new ArrayList<Employee>();
+//		employees.add(employee);
+		// Branch branch = new Branch("Sucursal 1", employees);
+		// employee.setBranch(branch);
 		return employee;
+	}
+
+	@GetMapping(value = "save", produces = "application/json")
+	public Employee save() {
+		Employee employee = new Employee();
+		employee.setFirstName("Tomas");
+		employee.setLastName("Empleado");
+		employee.setPhoneNumber("123123");
+//		ArrayList<Employee> employees = new ArrayList<Employee>();
+//		employees.add(employee);
+//		Branch branch = new Branch("Sucursal 1", employees);
+		// employee.setBranch(branch);
+		Employee employeePersisted = employeeService.save(employee);
+		return employeePersisted;
 	}
 
 	@GetMapping(value = "employees", produces = "application/json")

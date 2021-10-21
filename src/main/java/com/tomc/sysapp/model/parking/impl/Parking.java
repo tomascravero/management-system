@@ -2,13 +2,12 @@ package com.tomc.sysapp.model.parking.impl;
 
 import java.util.Optional;
 
-import com.tomc.sysapp.model.element.impl.Entity;
 import com.tomc.sysapp.model.floors.impl.Floor;
 import com.tomc.sysapp.model.parking.IParking;
 import com.tomc.sysapp.model.tickets.impl.Ticket;
 import com.tomc.sysapp.model.vehicle.impl.Vehicle;
 
-public class Parking extends Entity implements IParking {
+public class Parking implements IParking {
 
 	private Vehicle car;
 	private Floor floor;

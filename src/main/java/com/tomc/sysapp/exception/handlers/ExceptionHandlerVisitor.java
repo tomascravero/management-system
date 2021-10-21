@@ -1,4 +1,4 @@
-package com.tomc.sysapp.exceptionhandlers;
+package com.tomc.sysapp.exception.handlers;
 
 import com.tomc.sysapp.exception.impl.DuplicateInstanceException;
 import com.tomc.sysapp.exception.impl.InstanceNotFoundException;

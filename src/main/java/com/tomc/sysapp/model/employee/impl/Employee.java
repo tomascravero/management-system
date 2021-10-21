@@ -5,13 +5,15 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "employees")
 public class Employee {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id")
+	@Column(name = "employee_id")
 	private long id;
 	@Column(name = "first_name")
 	private String firstName;
@@ -19,6 +21,9 @@ public class Employee {
 	private String lastName;
 	@Column(name = "phone_number")
 	private String phoneNumber;
+//	@ManyToOne(fetch = FetchType.LAZY, optional = false)
+//	@JoinColumn(name = "branch", nullable = false)
+//	private Branch branch;
 
 	public Employee() {
 	}
@@ -29,8 +34,6 @@ public class Employee {
 		this.phoneNumber = phoneNumber;
 	}
 
-	// @Column(name = "branch")
-//	private Branch branch;
 	public long getId() {
 		return id;
 	}
@@ -58,5 +61,9 @@ public class Employee {
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
+
+//	public void setBranch(Branch branches) {
+//		this.branch = branches;
+//	}
 
 }
